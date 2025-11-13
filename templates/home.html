@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SPY_X — Cybersecurity Scanner</title>
+
+    <!-- Google Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #0a0f1c;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #0d111f !important;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+      }
+      .navbar-brand {
+        font-weight: 900;
+        color: #ffffff !important;
+      }
+      .nav-link {
+        color: #ffffff !important;
+        margin-right: 15px;
+        transition: 0.3s;
+      }
+      .nav-link:hover {
+        color: #009dff !important;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        height: 75vh;
+        background: url("static/carousel3.png") no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        color: rgb(0, 0, 0);
+        padding: 20px;
+      }
+      .hero-section h1 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+      .hero-section p {
+        max-width: 700px;
+        margin: 15px auto;
+        font-size: 1.2rem;
+        color: #dcdcdc;
+      }
+      .btn-success {
+        background-color: #00bbff;
+        border: none;
+        color: #000;
+        transition: 0.3s;
+      }
+      .btn-success:hover {
+        background-color: #00bbff;
+      }
+
+      /* About Section */
+      #about {
+        padding: 80px 20px;
+        text-align: center;
+      }
+      #about h2 {
+        color: #00bbff;
+        font-weight: 700;
+      }
+      #about p {
+        max-width: 700px;
+        margin: 20px auto;
+        color: #d3d3d3;
+      }
+
+      /* Features Section */
+      #features {
+        padding: 80px 20px;
+        background-color: #0d1428;
+      }
+      #features h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #00bbff;
+      }
+      .card {
+        background-color: #10182e;
+        border: none;
+        color: white;
+        border-radius: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 6px 20px rgba(115, 206, 252, 0.3);
+      }
+      .card-icon i {
+        color: #00bbff;
+      }
+
+      /* Details Section */
+      .details {
+        background-color: #10182e;
+        padding: 80px 20px;
+        color: white;
+      }
+      .details img {
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(1, 158, 255, 0.5);
+      }
+      .details h2 {
+        color: #00bbff;
+      }
+      .details ul {
+        list-style: none;
+        padding: 0;
+      }
+      .details li {
+        margin-bottom: 8px;
+      }
+
+      /* Quote Section */
+      #quote {
+        padding: 80px 20px;
+        text-align: center;
+      }
+      #quote h2 {
+        color: #00bbff;
+        font-weight: 700;
+      }
+      #quote p {
+        margin-top: 10px;
+        color: #d3d3d3;
+      }
+
+      /* Contact Section */
+      #contact {
+        padding: 80px 20px;
+        text-align: center;
+        background-color: #0d111f;
+      }
+      #contact h2 {
+        color: #00bbff;
+        font-weight: 700;
+      }
+      #contact p {
+        margin-top: 10px;
+        color: #cccccc;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #0d111f;
+        text-align: center;
+        padding: 20px;
+        color: #bbbbbb;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+      <div class="container">
+        <a class="navbar-brand" href="#"><i class="fas fa-shield-virus"></i> SPY_X</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="#home" class="nav-link"><i class="fas fa-home"></i>Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link"><i class="fas fa-question"></i>About</a></li>
+            <li class="nav-item"><a href="#features" class="nav-link"><i class="fas fa-list"></i> Features</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-phone"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <h1>Protect Your Digital World</h1>
+      <p>
+        SPY_X is an AI-powered cybersecurity tool for real-time malware detection and system
+        analysis. Secure your system today with next-generation protection.
+      </p>
+      <a href="#features" class="btn btn-success btn-lg mt-3">Get Started</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About SPY_X</h2>
+      <p>
+        SPY_X is a next-generation cybersecurity solution built to identify, analyze, and neutralize
+        potential threats before they impact your system. With real-time scanning, AI analysis, and
+        secure reporting, SPY_X is your trusted security companion.
+      </p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+      <h2>Core Features</h2>
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="card p-4 text-center h-100 shadow-sm">
+              <div class="card-icon mb-3"><i class="fas fa-bug fa-3x"></i></div>
+              <h3>Malware Scanner</h3>
+              <p>Scan your files and directories to detect malicious executables in real time.</p>
+              <a href="/malware" class="btn btn-outline-primary mt-2">Launch Scanner</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 text-center h-100 shadow-sm">
+              <div class="card-icon mb-3"><i class="fas fa-desktop fa-3x"></i></div>
+              <h3>System Information</h3>
+              <p>View detailed system statistics, firewall status, and antivirus information.</p>
+              <a href="/system_info" class="btn btn-outline-primary mt-2">View Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="details container-fluid d-flex flex-column flex-md-row align-items-center justify-content-center">
+      <div class="col-md-5 mb-4 text-center">
+        <img src="static\brain.gif" alt="AI Scanner" class="img-fluid" />
+      </div>
+      <div class="col-md-6 ps-md-5">
+        <h2>AI-Powered Threat Scanner</h2>
+        <p>
+          SPY_X uses advanced artificial intelligence to perform multi-layered scans that detect
+          vulnerabilities and malware patterns. It offers smart dashboards and predictive
+          protection powered by deep learning algorithms.
+        </p>
+        <h5>Key Highlights:</h5>
+        <ul>
+          <li>🔍 Ultra-Fast Malware Detection</li>
+          <li>🔐 Real-Time Protection</li>
+          <li>⚙️ Custom Scan Options</li>
+          <li>📊 Detailed Security Analytics</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote">
+      <h2>Request a Quote</h2>
+      <p>
+        Contact our sales team for custom cybersecurity solutions designed for your organization.
+      </p>
+      <a href="mailto:support@spyx.com" class="btn btn-outline-primary mt-3">Email Us</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: exaple@spyx.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: SPY_X Security Labs, Kochi, India</p>
+    </section>
+ <!-- Footer -->
+    <footer>
+      &copy; 2025 <strong>SPY_X Security</strong>. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
